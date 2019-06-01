@@ -4,7 +4,7 @@ rs,cs,m,s,e,sh=20,10,5,300,{0:"  ",1: "# "},[[[1,1],[1,1]],[[0,1,0],[1,1,1],[0, 
 0,0]],[[1,0,0],[1,1,1],[0,0,0]],[[0,0,1],[1,1,1],[0,0,0]],[[1,1,0],[0,1,1],[0,0,#
 0]],[[0,1,1],[1,1,0],[0,0,0]],[[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]]]        #
 b,cu,f,t=[[0]*cs for r in range(rs)],sh[random.randrange(0,len(sh))],False,True #
-n,ro,co,cr,l,d=sh[random.randrange(0,len(sh))],0,cs//2-len(cu[0]),0,1,s         #
+n,ro,co,cr,l,d=sh[random.randrange(0,len(sh))],0,cs//2,0,1,s                    #
 w.nodelay(t);w.keypad(t);curses.curs_set(f);ra=lambda r:range(r)                #
 def c_c(ro, co, se):                                                            #
     for (r,c) in [(r,c) for c in range(len(cu)) for r in range(len(cu))]:       #
@@ -17,7 +17,7 @@ def m_d():         # A Tetris implementation in 38 lines x 80 characters        
         if ro==0: sys.exit()                                                    #
         for (r,c) in [(r,c) for c in range(len(cu)) for r in range(len(cu))]:   #
             if ro+r in ra(rs)and co+c in ra(cs)and v():b[ro+r][co+c]=cu[r][c]   #
-        cu,n,ro,co,d=n,sh[random.randrange(0,len(sh))],-1,cs//2-len(cu),s+m-l*m #
+        cu,n,ro,co,d=n,sh[random.randrange(0,len(sh))],-1,cs//2,s+m-l*m         #
         for i in[j for j in range(rs)if g(j)]:b[1:i+1]=b[:i];b[0],l=[0]*cs,l+1  #
 try:               # $ git clone https://github.com/nickmpaz/tiny-tetris        #
     while True:    # $ cd tiny-tetris && python3 tiny-tetris.py                 #
