@@ -34,5 +34,3 @@ try:                                                                            
   if cr==0: m_d();ro+=1                                                         #
 except:h.echo();w.keypad(f);h.nocbreak();h.endwin();print('score: '+str(l))     #
 #=========#=========#=========#=========#=========#=========#=========#=========#
-
-
