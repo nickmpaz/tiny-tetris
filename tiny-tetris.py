@@ -12,9 +12,9 @@ def c_c(ro, co, se):                                                            
  return True                                                                    #
 def m_d():                                                                      #
  global ro,co,cu,n,l,d;v,g=lambda cu=cu:cu[r][c]>0,lambda j,b=b:sum(b[j])==cs   #
- if not c_c(ro + 1, co, cu):                                                    #
-  if ro==0: sys.exit()                                                          #
-  for (r,c) in [(r,c) for c in a(q(cu)) for r in a(q(cu))]:                     #
+ if not c_c(ro+1,co,cu):                                                        #
+  if ro==0:sys.exit()                                                           #
+  for (r,c) in [(r,c)for c in a(q(cu))for r in a(q(cu))]:                       #
    if ro+r in a(rs)and co+c in a(cs)and v():b[ro+r][co+c]=cu[r][c]              #
   cu,n,ro,co,d=n,p[random.randint(0,6)],-1,cs//2,s+m-l*m                        #
   for i in[j for j in a(rs)if g(j)]:b[1:i+1]=b[:i];b[0],l=[0]*cs,l+1            #
@@ -22,7 +22,7 @@ try:                                                                            
  while True:                                                                    #
   w.move(0,0);o=a(q(n));u=[(r,c) for c in a(q(cu)) for r in a(q(cu))]           #
   for (r,c) in [(r,c) for c in a(cs) for r in a(rs)]:w.addstr(r,c*q(e),y(b,r,c))#                              
-  w.addstr(rs,0,"-"*cs*2+"\nlevel: "+str(l));time.sleep(0.001)                  #
+  w.addstr(rs,0,"="*cs*2+"\nlevel: "+str(l));time.sleep(0.001)                  #
   for(r,c)in[(r,c)for(r,c)in u if cu[r][c]==1]:w.addstr(ro+r,(co+c)*2,y(cu,r,c))#
   for(r,c)in[(r,c)for c in o for r in o]:w.addstr(r,42+c*2,y(n,r,c)+"  ")       #
   try: cr = (cr+1)%d;ch = w.getkey()                     # up - rotate          #
