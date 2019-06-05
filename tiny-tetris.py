@@ -7,8 +7,8 @@ rs,cs,m,s,e,p,a,q=20,10,5,300,{0:"  ",1: "# "},[[[1,1],[1,1]],[[0,1,0],[1]*3,[0]
 [y]],0,cs//2,0,1,s,p[random.randint(0,6)];w.nodelay(t);w.keypad(t);h.curs_set(f)#
 A,B,sw=list,zip,{'U':'if not k(ro,co,A(B(*cu[::-1]))):cu=A(B(*cu[::-1]))','D':  #
 'm_d();ro+=1','L':'if not k(ro,co-1,cu):co-=1','R':'if not k(ro,co+1,cu):co+=1'}#
-def k(ro, co, se):                                                              #
- for (r,c) in [(r,c) for c in a(q(cu)) for r in a(q(cu))]:                      #
+def k(ro,co,se):                                                                #
+ for (r,c) in [(r,c)for c in a(q(cu))for r in a(q(cu))]:                        #
   if se[r][c]>0 and (not(0<=ro+r<rs and 0<=co+c<cs)or b[ro+r][co+c]>0):return t #
 def m_d():                                                                      #
  global ro,co,cu,n,l,d;v,g=lambda cu=cu:cu[r][c]>0,lambda j,b=b:sum(b[j])==cs   #
@@ -24,6 +24,6 @@ try:                                                                            
   for(r,c)in[(r,c)for(r,c)in u if cu[r][c]==1]:w.addstr(ro+r,(co+c)*2,y(cu,r,c))#
   for(r,c)in[(r,c)for c in o for r in o]:w.addstr(r,22+c*2,y(n,r,c)+"    ")     #
   try:cr=(cr+1)%d;ch=w.getkey();exec(sw[ch[4:5]]);raise                         #
-  except: exec('if cr==0:m_d();ro+=1');w.addstr(rs,0,"="*20+"\nlevel: "+str(l)) #
+  except: exec('if cr==0:m_d();ro+=1');w.addstr(rs,0,"="*19+"\nlevel: "+str(l)) #
 except:h.echo();w.keypad(f);h.nocbreak();h.endwin();print('score: '+str(l))     #
 #=========#=========#=========#=========#=========#=========#=========#=========#
