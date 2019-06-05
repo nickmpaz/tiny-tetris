@@ -19,12 +19,11 @@ def m_d():                                                                      
   for i in[j for j in a(rs)if g(j)]:b[1:i+1]=b[:i];b[0],l=[0]*cs,l+1            #
 try:                                                                            #
  while True:                                                                    #
-  w.move(0,0);o=a(q(n));z=a(q(cu));u=[(r,c)for c in z for r in z]               #
+  o,z=a(q(n)),a(q(cu));u=[(r,c)for c in z for r in z];time.sleep(0.001)         #
   for (r,c) in [(r,c) for c in a(cs) for r in a(rs)]:w.addstr(r,c*q(e),y(b,r,c))#
-  w.addstr(rs,0,"="*cs*2+"\nlevel: "+str(l));time.sleep(0.001)                  #
   for(r,c)in[(r,c)for(r,c)in u if cu[r][c]==1]:w.addstr(ro+r,(co+c)*2,y(cu,r,c))#
   for(r,c)in[(r,c)for c in o for r in o]:w.addstr(r,22+c*2,y(n,r,c)+"    ")     #
-  try: cr = (cr+1)%d;ch = w.getkey();exec(sw[ch[4:5]]+'\nif cr==0:m_d();ro+=1') #
-  except: exec('if cr==0:m_d();ro+=1')                                          #
+  try:cr=(cr+1)%d;ch=w.getkey();exec(sw[ch[4:5]]);raise                         #
+  except: exec('if cr==0:m_d();ro+=1');w.addstr(rs,0,"="*20+"\nlevel: "+str(l)) #
 except:h.echo();w.keypad(f);h.nocbreak();h.endwin();print('score: '+str(l))     #
 #=========#=========#=========#=========#=========#=========#=========#=========#
