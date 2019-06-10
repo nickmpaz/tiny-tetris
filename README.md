@@ -14,15 +14,11 @@ cd tiny-tetris && python3 tiny-tetris.py
 ```
 ## Controls
 
-up - rotate
-
-left - move left
-
-right - move right
-
-down - move down
-
-ctrl+c - quit
+- up: rotate
+- left: move left
+- right: move right
+- down: move down
+- ctrl+c: quit
 
 ## Acknowledgements
 
