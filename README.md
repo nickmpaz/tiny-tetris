@@ -8,8 +8,8 @@ A Tetris implementation that "fits on a business card" (22 lines x 80 characters
 
 ## Limitations
 
-No encoding: code is valid as long as you can (in theory) trace and understand
-it.
+- encoding: no encoding. code is valid as long as you can (in theory) trace and understand it.
+- packages: python standard library + curses
 
 ## Play It! 
 
