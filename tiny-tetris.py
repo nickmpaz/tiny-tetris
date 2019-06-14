@@ -1,5 +1,5 @@
 import time,random,sys;import curses as h;w=h.initscr();h.noecho();h.cbreak()   #
-rs,cs,m,s,e,p,a,q=20,10,5,300,{0:"  ",1: "# "},[[[1,1],[1,1]],[[0,1,0],[1]*3,[0]#
+rs,cs,m,s,e,p,a,q=20,10,5,300,{0:"  ",1: "[]"},[[[1,1],[1,1]],[[0,1,0],[1]*3,[0]#
 *3],[[1,0,0],[1]*3,[0]*3],[[0,0,1],[1]*3,[0]*3],[[1,1,0],[0,1,1],[0]*3],[[0,1,1]#
 ,[1,1,0],[0]*3],[[0]*4,[1]*4,[0]*4,[0]*4]],range,len;cu,b,f,t=p[random.randint(0#
 ,6)],[[0]*cs for r in a(rs)],False,True;y,ro,co,cr,l,d,n=lambda z,x,y,e=e:e[z[x]#
@@ -18,5 +18,5 @@ exec(('def k(ro,co,se):\n for(r,c)in[(r,c)for c in a(q(cu))for r in a(q(cu))]:' 
 'in[(r,c)for(r,c)in u if cu[r][c]==1]:w.addstr(ro+r,(co+c)*2,y(cu,r,c))\n  for('#
 'r,c)in[(r,c)for c in o for r in o]:w.addstr(r,22+c*2,y(n,r,c)+"    ")\n  try:c'#
 'r=(cr+1)%d;ch=w.getkey();exec(sw[ch[4:5]]);raise\n  except:exec("if cr==0:m_d('#
-');ro+=1");w.addstr(rs,0,"="*19+"\\nlevel: "+str(l))\nexcept:h.echo();w.keypad('#
+');ro+=1");w.addstr(rs,0,"="*20+"\\nlevel: "+str(l))\nexcept:h.echo();w.keypad('#
 'f);h.nocbreak();h.endwin();print("score: "+str(l))'))# TINY TETRIS by NICK PAZ #
