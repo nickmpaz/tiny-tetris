@@ -1,4 +1,4 @@
-from random import*;import time,sys;import curses as h;w=h.initscr();h.noecho() #  
+from random import*;import time,sys;import curses as h;w=h.initscr();h.noecho() #
 P,Q,m,s,e,p,a,q=20,10,5,300,{0:"· ",1:"██"},[[[1,1]]*2,[[0,1,0],[1]*3,[0]*3],[[1#
 ,0,0],[1]*3,[0]*3],[[0,0,1],[1]*3,[0]*3],[[1,1,0],[0,1,1],[0]*3],[[0,1,1],[1,1,0#
 ],[0]*3],[[0]*4,[1]*4,[0]*4,[0]*4]],range,len;M,b=p[randint(0,6)],[[0]*Q for r  #
