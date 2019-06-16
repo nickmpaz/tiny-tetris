@@ -3,6 +3,7 @@
 ## About
 
 A Tetris implementation that "fits on a business card" 
+
 Dimensions: 20 lines x 80 characters
 
 <img src="https://i.imgur.com/TY4szDq.gif" alt="Game in progress" width="40%">
