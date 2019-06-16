@@ -2,7 +2,7 @@
 
 ## About
 
-A Tetris implementation that "fits on a business card" (22 lines x 80 characters)
+A Tetris implementation that "fits on a business card" (20 lines x 80 characters)
 
 <img src="https://i.imgur.com/Uluwl0C.gif" alt="Game in progress" width="40%">
 

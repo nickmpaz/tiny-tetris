@@ -1,22 +1,20 @@
-import time,random,sys;import curses as h;w=h.initscr();h.noecho();h.cbreak()   #
-rs,cs,m,s,e,p,a,q=20,10,5,300,{0:"  ",1: "[]"},[[[1,1],[1,1]],[[0,1,0],[1]*3,[0]#
-*3],[[1,0,0],[1]*3,[0]*3],[[0,0,1],[1]*3,[0]*3],[[1,1,0],[0,1,1],[0]*3],[[0,1,1]#
-,[1,1,0],[0]*3],[[0]*4,[1]*4,[0]*4,[0]*4]],range,len;cu,b,f,t=p[random.randint(0#
-,6)],[[0]*cs for r in a(rs)],False,True;y,ro,co,cr,l,d,n=lambda z,x,y,e=e:e[z[x]#
-[y]],0,cs//2,0,1,s,p[random.randint(0,6)];w.nodelay(t);w.keypad(t);h.curs_set(f)#
-A,B,sw=list,zip,{'U':'if not k(ro,co,A(B(*cu[::-1]))):cu=A(B(*cu[::-1]))','D':  #
-'m_d();ro+=1','L':'if not k(ro,co-1,cu):co-=1','R':'if not k(ro,co+1,cu):co+=1'}#
-exec(('def k(ro,co,se):\n for(r,c)in[(r,c)for c in a(q(cu))for r in a(q(cu))]:' #
-'\n  if se[r][c]>0 and(not(0<=ro+r<rs and 0<=co+c<cs)or b[ro+r][co+c]>0):return'#
-' t\ndef m_d():\n global ro,co,cu,n,l,d\n if(k(ro+1,co,cu)and ro<1 and sys.exit'#
-'())or k(ro+1,co,cu):\n  for(r,c)in[(r,c)for c in a(q(cu))for r in a(q(cu))]:\n'#
-'   if ro+r in a(rs)and co+c in a(cs)and cu[r][c]>0:b[ro+r][co+c]=cu[r][c]\n  c'#
-'u,n,ro,co,d=n,p[random.randint(0,6)],-1,cs//2,s+m-l*m\n  for i in[j for j in a'#
-'(rs)if sum(b[j])>9]:b[1:i+1]=b[:i];b[0],l=[0]*cs,l+1\ntry:\n while True:\n  o,'#
-'z=a(q(n)),a(q(cu));u=[(r,c)for c in z for r in z];time.sleep(0.001)\n  for(r,c'#
-')in[(r,c)for c in a(cs)for r in a(rs)]:w.addstr(r,c*q(e),y(b,r,c))\n  for(r,c)'#
-'in[(r,c)for(r,c)in u if cu[r][c]==1]:w.addstr(ro+r,(co+c)*2,y(cu,r,c))\n  for('#
-'r,c)in[(r,c)for c in o for r in o]:w.addstr(r,22+c*2,y(n,r,c)+"    ")\n  try:c'#
-'r=(cr+1)%d;ch=w.getkey();exec(sw[ch[4:5]]);raise\n  except:exec("if cr==0:m_d('#
-');ro+=1");w.addstr(rs,0,"="*20+"\\nlevel: "+str(l))\nexcept:h.echo();w.keypad('#
-'f);h.nocbreak();h.endwin();print("score: "+str(l))'))# TINY TETRIS by NICK PAZ #
+from random import*;import time,sys;import curses as h;w=h.initscr();h.noecho() #  
+P,Q,m,s,e,p,a,q=20,10,5,300,{0:"· ",1:"██"},[[[1,1]]*2,[[0,1,0],[1]*3,[0]*3],[[1#
+,0,0],[1]*3,[0]*3],[[0,0,1],[1]*3,[0]*3],[[1,1,0],[0,1,1],[0]*3],[[0,1,1],[1,1,0#
+],[0]*3],[[0]*4,[1]*4,[0]*4,[0]*4]],range,len;M,b=p[randint(0,6)],[[0]*Q for r  #
+in a(P)];h.cbreak();y,R,C,cr,l,d,n=lambda z,x,y:e[z[x][y]],0,4,0,1,s,p[randint(0#
+,6)];w.nodelay(1);w.keypad(1);h.curs_set(0);A,B,sw=list,zip,{'U':'if not k(R,C'+#
+',A(B(*M[::-1]))):M=A(B(*M[::-1]))','D':'V();R+=1','L':'if not k(R,C-1,M):C-=1',#
+'R':'if not k(R,C+1,M):C+=1'};exec(('def k(R,C,se):\n for(r,c)in[(r,c)for c in '#
+'a(q(M))for r in a(q(M))]:\n  if se[r][c]>0 and(not(0<=R+r<P and 0<=C+c<Q)or b['#
+'R+r][C+c]>0):return 1\ndef V():\n global R,C,M,n,l,d\n if(k(R+1,C,M)and R<1 an'#
+'d sys.exit())or k(R+1,C,M):\n  for(r,c)in[(r,c)for c in a(q(M))for r in a(q(M)'#
+')]:\n   if R+r in a(P)and C+c in a(Q)and M[r][c]>0:b[R+r][C+c]=M[r][c]\n  M,n,'#
+'R,C,d=n,p[randint(0,6)],-1,4,s+m-l*m\n  for i in[j for j in a(P)if sum(b[j])>9'#
+']:b[1:i+1]=b[:i];b[0],l=[0]*Q,l+1\ntry:\n while 1:\n  o,z=a(q(n)),a(q(M));u=[('#
+'r,c)for c in z for r in z];time.sleep(.001)\n  for(r,c)in[(r,c)for c in a(Q)fo'#
+'r r in a(P)]:`(r,c*q(e),y(b,r,c))\n  for(r,c)in[(r,c)for(r,c)in u if M[r][c]>0'#
+']:`(R+r,(C+c)*2,y(M,r,c))\n  for(r,c)in[(r,c)for c in o for r in o]:`(r,22+c*2'#
+',y(n,r,c)+"· · ")\n  try:cr=(cr+1)%d;ch=w.getkey();exec(sw[ch[4:5]]);raise\n  '#
+'except:exec("if cr<1:V();R+=1");`(P,0,"level "+str(l))\nexcept:h.echo();w.keyp'#
+'ad(0);h.nocbreak();h.endwin();print("level "+str(l))').replace('`','w.addstr'))#
