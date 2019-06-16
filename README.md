@@ -5,7 +5,7 @@
 A Tetris implementation that "fits on a business card" 
 Dimensions: 20 lines x 80 characters
 
-<img src="https://i.imgur.com/qpqWBrN.mp4" alt="Game in progress" width="40%">
+<img src="https://i.imgur.com/TY4szDq.gif" alt="Game in progress" width="40%">
 
 ## Rules and Limitations
 
