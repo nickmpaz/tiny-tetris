@@ -18,6 +18,10 @@ Dimensions: 20 lines x 80 characters
 ```bash
 git clone https://github.com/nickmpaz/tiny-tetris && cd tiny-tetris && python3 tiny-tetris.py
 ```
+**Note**: If you are using Windows, you most likely need to install `windows-curses` for compatibility:
+```bash
+pip install windows-curses
+```
 ## Controls
 
 - up: rotate
